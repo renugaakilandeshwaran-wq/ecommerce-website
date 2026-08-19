@@ -5,7 +5,7 @@ import ProductDetails from "./pages/ProductDetails.tsx"
 import Wishlist from "./pages/Wishlist.tsx"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar"
-import Product from "./components/Product"
+import Products from "./components/Products.tsx"
 
 export default function App() {
   return (
@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/product" element={<Products />} />
           <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>

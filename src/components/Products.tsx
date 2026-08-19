@@ -5,7 +5,7 @@ import { api } from "../services/api";
 import Category from "./Category";
 
 
-function Product() {
+function Products() {
     const [product, setProduct] = useState<Product[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string>("");
@@ -124,4 +124,4 @@ function Product() {
         </>
     )
 }
-export default Product;
+export default Products;
