@@ -14,7 +14,7 @@ function Navbar() {
     return (
         <>
             <nav className="fixed top-0 left-0 z-50 rounded-lg right-0 bg-blue-900  lg:max-w-7xl mx-auto px-10 lg:px-4 py-4 lg:text-xl">
-                <div className="flex justify-center lg:justify-between md:justify-between  gap-8 items-center px-8 text-white">
+                <div className="flex justify-center lg:justify-between md:justify-between gap-7 lg:gap-8 items-center   lg:px-8 text-white">
                     <NavLink to="/" className="bg-pink-500 text-white rounded-full px-2 py-1 text-xs">ɱɘɘʂɧŏ</NavLink>
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/product">Product</NavLink>
