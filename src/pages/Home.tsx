@@ -61,7 +61,7 @@ function Home() {
     //sorting
 
     return (
-        <main className="max-w-7xl mx-auto mt-10">
+        <main className="max-w-7xl mx-auto mt-20">
 
 
             <div className="px-8 ">

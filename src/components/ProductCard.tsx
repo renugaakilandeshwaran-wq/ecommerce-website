@@ -18,7 +18,7 @@ function ProductCard({ product }: ProductCardProps) {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto grid">
+      <div className="max-w-7xl mx-auto grid mt-10">
 
 
         <div className="bg-white rounded-xl shadow-lg overflow-hidden w-full">

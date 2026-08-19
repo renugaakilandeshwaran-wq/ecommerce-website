@@ -69,20 +69,20 @@ function Products() {
 
     return (
         <>
-            <div className=" max-w-7xl mx-auto mt-20 ">
+            <div className=" max-w-7xl mx-auto mt-30 ">
                 <div className="grid  lg:grid-cols-[6fr_1fr] gap-5 px-8 items-center">
                     <input
                         type="text"
                         value={search}
                         onChange={((e) => setSearch(e.target.value))}
                         placeholder="Search  here..."
-                        className="border w-full  lg:w-190 rounded-lg border-gray-500  px-3 py-2"
+                        className="border placeholder:text-gray-500 w-full  lg:w-190 rounded-lg border-gray-500  px-3 py-2"
                     />
 
                     <select
                         value={sort}
                         onChange={(e) => setSort(e.target.value)}
-                        className="border border-gray-500 rounded-lg px-3 py-2 mt-4 lg:mt-0"
+                        className=" border-gray-500 bg-gray-500 text-white rounded-lg px-3 py-2 mt-4 lg:mt-0"
                     >
                         <option value="">Sort By</option>
                         <option value="low">Price:Low to High </option>
@@ -109,7 +109,7 @@ function Products() {
                     <p>No Items Found</p>
                 ) : (
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-4 mt-4 justify-between items-center">
+                    <div className=" max-w-7xl  mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-4 mt-4 justify-between items-center">
                         {
                             sortedProducts.map((product) => (
                                 <ProductCard

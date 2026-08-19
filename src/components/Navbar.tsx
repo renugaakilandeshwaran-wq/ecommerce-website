@@ -13,8 +13,8 @@ function Navbar() {
     const { Wishlist } = useWishlist();
     return (
         <>
-            <nav className="fixed top-0 left-0 rounded-lg right-0 bg-blue-900  lg:max-w-7xl mx-auto px-4 py-2 lg:text-xl">
-                <div className="flex justify-between items-center px-8 text-white">
+            <nav className="fixed top-0 left-0 z-50 rounded-lg right-0 bg-blue-900  lg:max-w-7xl mx-auto px-4 py-4 lg:text-xl">
+                <div className="flex justify-center lg:justify-between md:justify-between  gap-8 items-center px-8 text-white">
                     <NavLink to="/" className="bg-pink-500 text-white rounded-full px-2 py-1 text-xs">ɱɘɘʂɧŏ</NavLink>
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/product">Product</NavLink>
@@ -37,8 +37,10 @@ function Navbar() {
                             <span className="bg-green-500 absolute -top-2 -right-4 text-white text-center text-xs px-1 w-4 h-4 rounded-full">{totalItems}</span></NavLink>
 
                     </div>
-                    <NavLink to="/login">Login</NavLink>
+                    <div>
+                        <NavLink to="/login">Login</NavLink>
 
+                    </div>
                 </div>
             </nav >
 

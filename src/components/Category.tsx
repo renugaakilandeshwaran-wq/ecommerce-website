@@ -29,31 +29,33 @@ function Category({
     }, []);
 
     return (
-        <div className="mt-10 mx-auto max-w-7xl  grid lg:grid-cols-[4fr_4fr] gap-5 justify-center lg:gap-60 lg:justify-between items-center">
+        <div className="mt-10 mx-auto max-w-7xl px-6 grid lg:grid-cols-[4fr_4fr] gap-10 justify-center lg:gap-60 lg:justify-between lg:items-center">
+
+            <div className="px-10 lg:px-2">
 
 
+                <select
+                    className="text-white   bg-yellow-500 shadow-lg w-full lg:w-100 border-gray-400 py-2 rounded-lg  mx-auto uppercase hover:text-blue-500 "
+                    aria-placeholder="All Categories"
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                >
+                    <option value="All">All</option>
 
-            <select
-                className="border lg:w-100 border-gray-400 py-2 rounded-lg lg:w-full w-72 mx-auto  uppercase hover:text-blue-500 "
-                aria-placeholder="All Categories"
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-            >
-                <option value="All">All</option>
+                    {categories.map((category) => (
+                        <option
+                            value={category}
+                            key={category}
 
-                {categories.map((category) => (
-                    <option
-                        value={category}
-                        key={category}
-
-                    >
-                        {category}
-                    </option>
-                ))}
-            </select>
+                        >
+                            {category}
+                        </option>
+                    ))}
+                </select>
+            </div>
 
 
-            <div className=" max-w-7xl mx-auto grid grid-cols-2 justify-between items-center gap-10 md:grid-cols-4 lg:gap-5 lg:grid-cols-4 ">
+            <div className=" max-w-7xl mx-auto flex px-8  justify-between items-center gap-10 md:grid-cols-4 lg:gap-5 lg:grid-cols-4 ">
                 {
                     categories.map((category) => {
                         const categoryProduct = products.find(
@@ -62,24 +64,29 @@ function Category({
                         return (
                             <div key={category}
                                 onClick={() => setSelectedCategory(category)}
-                                className="  "
+                                className="grid  lg:flex-cols-2   lg:justify-between items-center  gap-5  "
                             >
-                                <div className="grid  grid-cols-1 items-center justify-center gap-5 ">
-                                    <div className="bg-blue-100 rounded-t-2xl w-fit py-2">
+                                <div className=" mx-auto ">
+                                    <div className="bg-blue-100 lg:w-32  w-14 lg:h-fit  h-12 rounded-t-2xl py-2">
 
                                         <img
                                             src={categoryProduct?.image}
                                             alt={category}
-                                            className="w-12 h-8 mt-4 object-contain mx-auto  cursor-pointer hover:shadow-xl "
+                                            className="w-12 h-8 mt-2 py-1 object-contain mx-auto cursor-pointer hover:shadow-xl "
                                         />
-
+                                        <div className="">
+                                            <p className=" text-xs capitalize tracking-tighter hover:text-blue-500 text-center mt-4 lg:mt-4 mb-4 uppercase mt-2">
+                                                {category}
+                                            </p>
+                                        </div>
                                     </div>
 
-                                    <p className=" text-xs capitalize hover:text-blue-500  uppercase">
-                                        {category}
-                                    </p>
+
                                 </div>
+
+
                             </div>
+
                         )
                     })
                 }

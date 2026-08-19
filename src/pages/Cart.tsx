@@ -161,7 +161,7 @@ function Cart() {
                                             onClick={() =>
                                                 decreaseQuantity(product.id)
                                             }
-                                            className="bg-gray-200 p-2 rounded"
+                                            className="bg-red-500  text-white  p-2 rounded"
                                         >
                                             <FaMinus />
                                         </button>
@@ -174,7 +174,7 @@ function Cart() {
                                             onClick={() =>
                                                 increaseQuantity(product.id)
                                             }
-                                            className="bg-gray-200 p-2 rounded"
+                                            className="bg-green-500 text-white p-2 rounded"
                                         >
                                             <FaPlus />
                                         </button>
@@ -186,9 +186,9 @@ function Cart() {
 
                                 {/* ITEM TOTAL */}
 
-                                <div className="text- relative">
+                                <div className=" relative">
 
-                                    <p className="font-bold text-lg">
+                                    <p className="font-bold border border-gray-100 shadow-lg px-4 py-1  mt-4 rounded-lg text-lg ">
                                         ${(product.price * quantity).toFixed(2)}
                                     </p>
 
@@ -196,7 +196,7 @@ function Cart() {
                                         onClick={() =>
                                             removeFromCart(product.id)
                                         }
-                                        className="text-red-500 mt- absolute -top-60 -right-20  md:-top-8 md:left-10 lg:-top-8 lg:right-5"
+                                        className="text-red-500 mt- absolute -top-70 -right-30  md:-top-8 md:left-10 lg:-top-8 lg:right-5"
                                     >
                                         <FaTrash />
                                     </button>
@@ -245,9 +245,10 @@ function Cart() {
                         <span>${total.toFixed(2)}</span>
                     </div>
 
-                    <Link to="/login" className="">  <button className="w-full bg-green-500 text-white py-3 rounded-lg mt-6 hover:bg-green-600">
-                        Checkout
-                    </button>
+                    <Link to="/login" className="">
+                        <button className="w-full bg-green-500 text-white py-3 rounded-lg mt-6 hover:bg-green-600">
+                            Checkout
+                        </button>
                     </Link>
 
 
